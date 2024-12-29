@@ -1,0 +1,14 @@
+<div class="flex w-full justify-between h-full">
+
+  <div class="flex space-x-4 w-full px-10 h-full transition-transform duration-300 overflow-hidden" id="carousel"
+       [style.transform]="'translateX(-' + (currentIndex * 100) + '%)'">
+    <div *ngFor="let item of carouselItems; let i = index" class="flex flex-grow flex-col w-1/3 bg-white rounded-lg shadow-lg">
+      <img [src]="item.image" alt="{{ item.title }}" class="w-full h-1/4 object-cover rounded-t-lg">
+      <div class="p-4">
+        <h3 class="font-semibold text-lg">{{ item.title }}</h3>
+        <p class="text-gray-500">{{ item.description }}</p>
+      </div>
+    </div>
+  </div>
+
+</div>
